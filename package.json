@@ -8,6 +8,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "@types/bootstrap": "^5.2.6",
+    "nuxt": "3.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.8.1",
+    "bootstrap": "^5.2.3",
+    "vue-i18n": "^9.2.2"
   }
 }

@@ -34,7 +34,8 @@ export default defineComponent({
 <style lang="scss" module>
 .link {
 
-  size: calc((20/1366)*100vw);
+  font-size: calc((20/1366)*100vw);
+  font-weight: bold;
   &.normal {
     color: #68b04e;
   }

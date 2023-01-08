@@ -1,5 +1,5 @@
 <template>
-  <MoleculeNav></MoleculeNav>
+  
 </template>
 <script lang= "ts">
 

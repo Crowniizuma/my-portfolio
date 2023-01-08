@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="link" :class="[isClicked? $style.clicked : $style.normal, $style.link ]">{{ $t(title) }}</NuxtLink>
+  <NuxtLink :to="link" :class="[isVisiting? $style.visiting : $style.header, isFooter? $style.footer : $style.header, $style.link ]">{{ $t(title) }}</NuxtLink>
 </template>
 <script lang="ts">
 import { PropType } from 'vue';
@@ -7,7 +7,8 @@ import { PropType } from 'vue';
 export type Props = {
   link: string,
   title: string,
-  isClicked?: boolean,
+  isVisiting?: boolean,
+  isFooter?: boolean
 }
 export default defineComponent({
   props: {
@@ -19,8 +20,13 @@ export default defineComponent({
       type: String as PropType<Props['title']>,
       required: true 
     },
-    isClicked: {
-      type: Boolean as PropType<Props['isClicked']>,
+    isVisiting: {
+      type: Boolean as PropType<Props['isVisiting']>,
+      required: false,
+      default: false 
+    },
+    isFooter: {
+      type: Boolean as PropType<Props['isFooter']>,
       required: false,
       default: false 
     },
@@ -32,16 +38,46 @@ export default defineComponent({
 </script>
 
 <style lang="scss" module>
+@import '@/assets/styles/main.scss';
 .link {
 
-  font-size: calc((20/1366)*100vw);
-  font-weight: bold;
-  &.normal {
-    color: #68b04e;
+  @include pc_standard {
+    font-size: 16px;
   }
-  
-  &.clicked {
-    color: #a9aaa9;
+  font-size: calc((16 / 1366)*100vw);
+  font-weight: bold;
+  &.header {
+    color: #68b04e;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #68b04e;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    &.visiting {
+      &::after {
+        content: '';
+        transform: none;
+      }
+    }
+  }
+
+  &.footer {
+    color: #fff;
   }
 }
 </style>

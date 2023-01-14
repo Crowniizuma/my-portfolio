@@ -45,12 +45,11 @@ export default defineComponent({
     display: flex;
     @include pc_standard {
       column-gap: 50px;
-      padding: 15px 40px;  
     }
+    padding: 15px 40px;  
     column-gap: calc((50/1366)*100vw);
     justify-content: right;
     align-items: center;
-    padding: 15px calc((40/1366) * 100vw);
 
   }
 }

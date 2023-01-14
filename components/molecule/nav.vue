@@ -58,19 +58,19 @@ export default defineComponent({
     const snsLinks = ref<Array<SnsLinkProps>>([
       {
         link: "https://www.linkedin.com/in/nguyen-thi-hoang-anh-b7688a193/",
-        imgSourceHeader: "/image/sns/icons8-linkedin-circled-50.png",
+        imgSourceHeader: "/image/sns/linkedin-header.png",
         imgSourceFooter: "/image/sns/linkedin-footer.png",
         isSnsFooter: props.isFooterNav
       },
       {
         link: "https://github.com/Crowniizuma",
-        imgSourceHeader: "/image/sns/icons8-github-48.png",
+        imgSourceHeader: "/image/sns/github-header.png",
         imgSourceFooter: "/image/sns/github-footer.png",
         isSnsFooter: props.isFooterNav
       },
       {
         link: "mailto: nthoanganh10997@gmail.com",
-        imgSourceHeader: "/image/sns/icons8-mail-50.png",
+        imgSourceHeader: "/image/sns/mail-header.png",
         imgSourceFooter: "/image/sns/mail-footer.png",
         isSnsFooter: props.isFooterNav
       }

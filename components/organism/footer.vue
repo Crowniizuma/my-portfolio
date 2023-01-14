@@ -22,10 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include pc_standard {
-      padding: 15px 40px;  
-    }
-    padding: 15px calc((40/1366) * 100vw);
+    padding: 15px 40px;  
     .copyright {
       color: #fff;
       @include pc_standard {

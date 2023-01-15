@@ -47,7 +47,7 @@ export default defineComponent({
   font-size: calc((16 / 1366)*100vw);
   font-weight: bold;
   &.header {
-    color: #68b04e;
+    color: #d4ac2b;
     display: inline-block;
     position: relative;
 
@@ -59,7 +59,7 @@ export default defineComponent({
       height: 2px;
       bottom: -5px;
       left: 0;
-      background-color: #68b04e;
+      background-color: #d4ac2b;
       transform-origin: bottom right;
       transition: transform 0.25s ease-out;
     }

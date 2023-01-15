@@ -13,7 +13,7 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
-  background-color: #68b04e;
+  background: linear-gradient(45deg,#ffce45, #d4ac2b);
 
   .footerWrapper {
     max-width: 1280px;

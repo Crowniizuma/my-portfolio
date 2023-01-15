@@ -30,14 +30,14 @@ $screen-pc-standard: 1366px;
 
 //Languages select
 .ant-select {
-  color: #68b04e !important;
+  color: #d4ac2b !important;
   font-weight: bold !important;
   @include pc_standard {
     font-size: 14px !important;
     width: 106px !important;
   } 
   font-size: calc((14/1366)*100vw) !important;
-  border: 3px solid #68b04e !important;
+  border: 3px solid #d4ac2b !important;
   background-color: transparent !important;
   border-radius: 10px !important;
   width: calc((106/1366)*100vw);
@@ -60,12 +60,12 @@ $screen-pc-standard: 1366px;
     }
   }
   .ant-select-arrow {
-    color: #68b04e !important;
+    color: #d4ac2b !important;
   }
 
   &:hover {
     color: #fff !important;
-    background-color: #68b04e !important;
+    background-color: #d4ac2b !important;
     transition: none !important;
 
     .ant-select-selector {
@@ -80,7 +80,7 @@ $screen-pc-standard: 1366px;
 
 .ant-select-single.ant-select-open {
   .ant-select-selection-item {
-    color: #68b04e !important;
+    color: #d4ac2b !important;
   }
   &:hover {
     .ant-select-selection-item {
@@ -96,7 +96,7 @@ $screen-pc-standard: 1366px;
   border-radius: 10px !important;
 
   .ant-select-item-option-content {
-    color: #68b04e !important;
+    color: #d4ac2b !important;
     font-weight: bold !important;
     @include pc_standard {
       font-size: 16px !important;
@@ -112,4 +112,8 @@ $screen-pc-standard: 1366px;
 
 .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
   background-color: #fff !important; 
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  box-shadow: none !important;
 }

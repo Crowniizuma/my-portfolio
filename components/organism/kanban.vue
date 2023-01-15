@@ -4,7 +4,9 @@
       <img src="/image/home/home-pic.png"/>
     </div>
     <div :class="$style.textWrapper">
-      <p :class="$style.title1">{{$t("hi, i'm anh")}}</p>
+      <div :class="$style.title1Wrapper">
+        <p :class="[$style.title1, $style.typingEffect]">{{$t("hi, i'm anh")}}</p>
+      </div>
       <p :class="$style.title2">{{$t("a front-end developer")}}</p>
       <a :class="$style.button" >
         <p :class="$style.buttonText">{{ $t('my resume') }}</p>
@@ -49,13 +51,11 @@ export default defineComponent({
     left: calc((150 / 1200) * 100%);
     top: 0;
     border-radius: 50%;
-    background-color: #68b04e;
+    background: linear-gradient(#ffce45, #d4ac2b);
     z-index: -1;
   }
   
   .imageWrapper {
-    
-    
     img {
       max-width: 300px;
       width: calc((300 / 1366) * 100vw);
@@ -65,32 +65,37 @@ export default defineComponent({
     max-width: 500px;
     width: calc((500 / 1366) * 100vw);
     @include pc_standard {
-      padding: 40px;  
+      padding: 50px;  
     }
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: calc((40 / 1366) * 100vw);
-    background-color: rgba(212, 238, 195, 0.5);
+    padding-left: calc((50 / 1366) * 100vw);
+    background-color: rgba(234, 220, 166, 0.5);
     border-radius: 10%;
-  
-    .title1 {
-      @include pc_standard {
-        font-size: 45px;
+    
+    .title1Wrapper {
+      width: fit-content;
+      .title1 {
+        @include pc_standard {
+          font-size: 45px;
+        }
+        font-size: calc((45 / 1366) * 100vw);
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 10px;
       }
-      font-size: calc((45 / 1366) * 100vw);
-      font-weight: bold;
-      color: #000;
-      margin-bottom: 10px;
     }
   
     .title2 {
       @include pc_standard {
-        font-size: 60px;
+        font-size: 55px;
       }
-      font-size: calc((60 / 1366) * 100vw);
+      font-size: calc((55 / 1366) * 100vw);
       font-weight: bold;
-      color: #68b04e;
+      background: -webkit-linear-gradient(45deg,#ffce45, #d4ac2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       line-height: 1.25;
       margin-bottom: 20px;
     }
@@ -109,7 +114,7 @@ export default defineComponent({
       padding-bottom: calc((15 / 1366) * 100vw);
       padding-right: calc((30 / 1366) * 100vw);
       padding-left: calc((40 / 1366) * 100vw);
-      background-color: #68b04e;
+      background-color: #d4ac2b;
       border: 2px solid transparent;
       border-radius: 10px;
       cursor: pointer;
@@ -140,17 +145,39 @@ export default defineComponent({
       }
       &:hover {
         background-color: #fff;
-        border: 2px solid #68b04e;
+        border: 2px solid #d4ac2b;
 
         &::before {
           background-image: url('/image/home/arrow-right-hover.svg');
         }
         .buttonText {
-          color: #68b04e;
+          color: #d4ac2b;
         }
       }
     }
 
+    .typingEffect {
+      width: 0;
+      overflow: hidden; /* Ensure the text is not visible until the typewriter effect*/
+      border-right: 2px solid #000; /* The cursor*/
+      white-space: nowrap; /* Keeps the text on a single line */
+      animation: typing 2s steps(30) forwards, blink 1s infinite;
+    }
+
+    /* The typing animation */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      0%, 45% {
+        border-color: transparent;
+      }
+      50%, 100% {
+        border-color: #000;
+      }
+    }
   }
 }
 </style>

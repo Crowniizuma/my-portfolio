@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" :class="$style.link">
+  <a :href="link" :class="$style.link" target="_blank">
     <img :src="isSnsFooter? imgSourceFooter : imgSourceHeader" target="_blank"/>
   </a>
 </template>

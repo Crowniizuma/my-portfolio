@@ -10,10 +10,9 @@
 <style lang="scss" module>
 @import '@/assets/styles/main.scss';
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100vw;
-  background: linear-gradient(45deg,#ffce45, #d4ac2b);
+  background: linear-gradient(45deg,$color3, $color1);
+  z-index: 100;
 
   .footerWrapper {
     max-width: 1280px;
@@ -24,7 +23,7 @@
     justify-content: space-between;
     padding: 15px 40px;  
     .copyright {
-      color: #fff;
+      color: $color2;
       @include pc_standard {
         font-size: 16px;
       }

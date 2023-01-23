@@ -4,7 +4,10 @@
 body {
   font-family: 'Rubik', sans-serif;
 }
-
+//color
+$color1 : #d4ac2b;
+$color2 : #fff;
+$color3 : rgba(255, 206, 69, 0.8);
 //Breakpoints
 $screen-sp-max: 1023px;
 $screen-pc-min: 1024px;
@@ -30,14 +33,14 @@ $screen-pc-standard: 1366px;
 
 //Languages select
 .ant-select {
-  color: #d4ac2b !important;
+  color: $color1 !important;
   font-weight: bold !important;
   @include pc_standard {
     font-size: 14px !important;
     width: 106px !important;
   } 
   font-size: calc((14/1366)*100vw) !important;
-  border: 3px solid #d4ac2b !important;
+  border: 3px solid $color1 !important;
   background-color: transparent !important;
   border-radius: 10px !important;
   width: calc((106/1366)*100vw);
@@ -60,34 +63,34 @@ $screen-pc-standard: 1366px;
     }
   }
   .ant-select-arrow {
-    color: #d4ac2b !important;
+    color: $color1 !important;
   }
 
   &:hover {
-    color: #fff !important;
-    background-color: #d4ac2b !important;
+    color: $color2 !important;
+    background-color: $color1 !important;
     transition: none !important;
 
     .ant-select-selector {
-      color: #fff !important;
+      color: $color2 !important;
     }
   
     .ant-select-arrow {
-      color: #fff !important;
+      color: $color2 !important;
     }
   }
 }
 
 .ant-select-single.ant-select-open {
   .ant-select-selection-item {
-    color: #d4ac2b !important;
+    color: $color1 !important;
   }
   &:hover {
     .ant-select-selection-item {
-      color: #fff !important;
+      color: $color2 !important;
     }
     .ant-select-arrow {
-      color: #fff !important;
+      color: $color2 !important;
     }
   }
 }
@@ -96,7 +99,7 @@ $screen-pc-standard: 1366px;
   border-radius: 10px !important;
 
   .ant-select-item-option-content {
-    color: #d4ac2b !important;
+    color: $color1 !important;
     font-weight: bold !important;
     @include pc_standard {
       font-size: 16px !important;
@@ -106,12 +109,12 @@ $screen-pc-standard: 1366px;
 }
 
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-  background-color: #fff !important;
+  background-color: $color2 !important;
   
 }
 
 .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
-  background-color: #fff !important; 
+  background-color: $color2 !important; 
 }
 
 .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {

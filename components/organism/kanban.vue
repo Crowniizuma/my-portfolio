@@ -5,7 +5,7 @@
     </div>
     <div :class="$style.textWrapper">
       <div :class="$style.title1Wrapper">
-        <p :class="[$style.title1, $style.typingEffect]">{{$t("hi, i'm anh")}}</p>
+        <p :class="[$style.title1, $style.typingEffect]">{{$t("hi, i'm Anh")}}</p>
       </div>
       <p :class="$style.title2">{{$t("a front-end developer")}}</p>
       <a :class="$style.button" >
@@ -31,11 +31,8 @@ export default defineComponent({
   width: 100%;
   display: flex;
   justify-content: center;
-  @include pc_standard {
-    margin-top: 50px;
-  }
-  margin-top: calc((50 / 1366) * 100vw);
   position: relative;
+  max-height: 400px;
 
   &::before {
     content: '';
@@ -51,7 +48,7 @@ export default defineComponent({
     left: calc((150 / 1200) * 100%);
     top: 0;
     border-radius: 50%;
-    background: linear-gradient(#ffce45, #d4ac2b);
+    background: linear-gradient($color3, $color1);
     z-index: -1;
   }
   
@@ -93,7 +90,7 @@ export default defineComponent({
       }
       font-size: calc((55 / 1366) * 100vw);
       font-weight: bold;
-      background: -webkit-linear-gradient(45deg,#ffce45, #d4ac2b);
+      background: -webkit-linear-gradient(45deg,$color3, $color3);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 1.25;
@@ -114,7 +111,7 @@ export default defineComponent({
       padding-bottom: calc((15 / 1366) * 100vw);
       padding-right: calc((30 / 1366) * 100vw);
       padding-left: calc((40 / 1366) * 100vw);
-      background-color: #d4ac2b;
+      background-color: $color1;
       border: 2px solid transparent;
       border-radius: 10px;
       cursor: pointer;
@@ -140,18 +137,18 @@ export default defineComponent({
           font-size: 20px;
         }
         font-size: calc((20 / 1366) * 100vw);
-        color: #fff;
+        color: $color2;
         font-weight: bold;
       }
       &:hover {
-        background-color: #fff;
-        border: 2px solid #d4ac2b;
+        background-color: $color2;
+        border: 2px solid $color1;
 
         &::before {
           background-image: url('/image/home/arrow-right-hover.svg');
         }
         .buttonText {
-          color: #d4ac2b;
+          color: $color1;
         }
       }
     }

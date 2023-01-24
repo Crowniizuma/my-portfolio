@@ -3,12 +3,12 @@
     <div :class="$style.homeWrapper">
       <div :class="$style.kanbanWrapper">
         <OrganismKanban></OrganismKanban>
-        <div :class="$style.scrollDownIcon">
+        <div :class="$style.scrollDownIcon" @click="scrollToNewestProject">
           <AtomScrollDownIcon></AtomScrollDownIcon>
         </div>
       </div>
       <div ref="myNewestProjects" :class="[$style.myNewestProjects, scrolledToBottom ? $style.reveal : undefined]">
-        <p :class="$style.bigTitle">{{$t('my newest project')}}</p>
+        <p :class="$style.bigTitle">{{$t('my newest projects')}}</p>
         <OrganismCoverFlowProjectsList></OrganismCoverFlowProjectsList>
       </div>
     </div>
@@ -23,13 +23,15 @@ export default defineComponent({
     const myNewestProjects = ref<HTMLDivElement>();
     const home = ref<HTMLDivElement>();
     var scrolledToBottom = ref<Boolean>(false);
-    // const scrollToNewestProject = () => {
-    //   if(myNewestProjects.value && home.value) {
-    //     let scrollDuration = 1500;
-    //     let myNewestProjectsTop = myNewestProjects.value.offsetTop - 100;
-    //     home.value.animate({scrollTop: myNewestProjectsTop}, scrollDuration);
-    //   }
-    // }
+    const scrollToNewestProject = () => {
+      if(myNewestProjects.value && home.value) {
+        let myNewestProjectsTop = myNewestProjects.value.offsetTop;
+        window.scrollTo({
+          top: myNewestProjectsTop,
+          behavior: 'smooth'
+        })
+      }
+    }
     const handleScroll = () => {
       console.log("handleScroll");
       if (myNewestProjects.value && home.value) {
@@ -45,14 +47,13 @@ export default defineComponent({
     }
     onMounted(() => {
       window.addEventListener('scroll', handleScroll);
-      // window.addEventListener('scroll', scrollToNewestProject);
     });
     return {
       myNewestProjects,
       home,
       scrolledToBottom,
       handleScroll,
-      //scrollToNewestProject
+      scrollToNewestProject
     }
   },
 })

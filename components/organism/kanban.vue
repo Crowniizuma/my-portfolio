@@ -49,10 +49,11 @@ export default defineComponent({
     top: 0;
     border-radius: 50%;
     background: linear-gradient($color3, $color1);
-    z-index: -1;
+    
   }
   
   .imageWrapper {
+    z-index: 1;
     img {
       max-width: 300px;
       width: calc((300 / 1366) * 100vw);
@@ -70,6 +71,7 @@ export default defineComponent({
     padding-left: calc((50 / 1366) * 100vw);
     background-color: rgba(234, 220, 166, 0.5);
     border-radius: 10%;
+    z-index: 2;
     
     .title1Wrapper {
       width: fit-content;

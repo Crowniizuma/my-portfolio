@@ -1,5 +1,5 @@
 <template>
-  <div ref="home" :class="[$style.home, scrolledToProjects ? $style.changeColor : undefined]">
+  <div ref="home" :class="$style.home">
     <div :class="$style.homeWrapper">
       <div :class="$style.kanbanWrapper">
         <OrganismKanban></OrganismKanban>
@@ -101,10 +101,8 @@ export default defineComponent({
 @import "@/assets/styles/main.scss";
 .home {
   width: 100vw;
-  transition: background-color 0.2s ease-out;
-  &.changeColor {
-    background-image: linear-gradient(180deg, $color1 0%,  $color3 100%);
-  }
+  background-image: url("https://i.pinimg.com/564x/e5/45/40/e5454032198880571c878d0069de745c.jpg");
+  background-size: cover;
   .homeWrapper {
     max-width: 1280px;
     padding-left: 40px;
@@ -134,7 +132,7 @@ export default defineComponent({
       }
       font-size: calc((40 / 1366) * 100vw);
       color: #000;
-
+      text-shadow: 5px 5px $color3;
     }
 
     .more {
@@ -213,9 +211,6 @@ export default defineComponent({
         opacity: 1;
       }
 
-      .bigTitle {
-        text-shadow: 5px 5px rgb(255, 255, 255);
-      }
     }
     
     .blogWrapper {
@@ -229,9 +224,7 @@ export default defineComponent({
         transform: translateY(0);
         opacity: 1;
       }
-      .bigTitle {
-        text-shadow: 5px 5px $color3;
-      }
+      
     }
   }
 }

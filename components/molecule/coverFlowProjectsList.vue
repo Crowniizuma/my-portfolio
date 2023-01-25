@@ -71,7 +71,6 @@ export default defineComponent({
 <style module lang="scss">
 .projectSlide {
   width: 100%;
-  height: 1000px;
   .swiper {
     display: flex;
     justify-content: center;

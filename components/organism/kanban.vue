@@ -90,11 +90,10 @@ export default defineComponent({
       }
       font-size: calc((55 / 1366) * 100vw);
       font-weight: bold;
-      background: -webkit-linear-gradient(45deg,$color3, $color3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #000;
       line-height: 1.25;
       margin-bottom: 20px;
+      text-shadow: 5px 5px 3px $color1;
     }
   
     .button {

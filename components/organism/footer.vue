@@ -11,7 +11,7 @@
 @import '@/assets/styles/main.scss';
 .footer {
   width: 100vw;
-  background: linear-gradient(45deg,$color3, $color1);
+  background-image: linear-gradient(180deg, $color4 0%,  $color5 100%);
   z-index: 100;
 
   .footerWrapper {

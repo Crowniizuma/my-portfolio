@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img :src="imageSrc" :class="$style.imageSrc"/>
+  <div :class="$style.imageWrapper">
+    <img :src="imageSrc" :class="$style.image"/>
   </div>
 </template>
 
@@ -24,16 +24,10 @@ export default defineComponent({
 
 <style lang="scss" module>
 @import '@/assets/styles/main.scss';
-.imageSrc {
-  width: 100%;
-  position: relative;
-  &::after {
-    content: '';
-    width: 300px;
-    height: 350px;
-    left: -10px;
-    top: -10px;
-    border: 5px solid $color1;
+.imageWrapper {
+  width: 50%;
+  .image {
+    width: 100%;
   }
 }
 </style>

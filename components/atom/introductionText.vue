@@ -29,8 +29,9 @@ export default defineComponent({
 
 .introduction {
   @include pc_standard {
-    font-size: 20px;
+    font-size: 25px;
   }
-  font-size: calc((20 / 1366) * 100vw);
+  font-size: calc((25 / 1366) * 100vw);
+  line-height: 1.5em;
 }
 </style>

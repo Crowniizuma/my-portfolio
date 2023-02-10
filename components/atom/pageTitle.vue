@@ -29,9 +29,10 @@ export default defineComponent({
 
 .pageTitle {
   @include pc_standard {
-    font-size: 40px;
+    font-size: 100px;
   }
-  font-size: calc((40 / 1366) * 100vw);
+  font-size: calc((100 / 1366) * 100vw);
   font-weight: bold;
+  text-shadow: 5px 5px $color3;
 }
 </style>

@@ -15,7 +15,8 @@ export default defineComponent({
       {
         pageTitle: "about",
         introductionText: "I have 2.5 years experiences working in IT industry as front-end web developer, system engineer and Bridge SE. I love solving problems and creating simple yet beautiful UI.",
-        imageSrc: "https://i.pinimg.com/564x/32/cd/b5/32cdb5096400eebc7b5fcf3fb510a320.jpg"
+        //imageSrc: "https://i.pinimg.com/564x/8d/85/6d/8d856d73c15c6281d004b33f291412bf.jpg"
+        imageSrc: "/image/about/about-1.jpeg"
       }
     )
     return {
@@ -37,9 +38,9 @@ export default defineComponent({
       padding-right: 40px;
       margin: auto;
       @include pc_standard {
-      padding-top: 150px;
+      padding-top: 100px;
       }
-      padding-top: calc((150 / 1366) * 100vw);
+      padding-top: calc((100 / 1366) * 100vw);
     }
   }
 

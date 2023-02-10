@@ -1,5 +1,5 @@
 <template>
-  <div ref="home" :class="$style.home">
+  <div ref="home" :class="[$style.home, scrolledToProjects ? $style.changeColor : undefined]">
     <div :class="$style.homeWrapper">
       <div :class="$style.kanbanWrapper">
         <OrganismKanban></OrganismKanban>
@@ -101,8 +101,12 @@ export default defineComponent({
 @import "@/assets/styles/main.scss";
 .home {
   width: 100vw;
-  background-image: url("https://i.pinimg.com/564x/e5/45/40/e5454032198880571c878d0069de745c.jpg");
-  background-size: cover;
+
+  &.changeColor {
+    background: linear-gradient(180deg, $color1 0%, $color3 100%);
+  }
+  //background-image: url("https://i.pinimg.com/564x/e5/45/40/e5454032198880571c878d0069de745c.jpg");
+  //background-size: cover;
   .homeWrapper {
     max-width: 1280px;
     padding-left: 40px;
@@ -206,6 +210,9 @@ export default defineComponent({
       opacity: 0;
       transition: all 0.5s ease;
 
+      .bigTitle {
+        text-shadow: 5px 5px $color2;
+      }
       &.reveal {
         transform: translateY(0);
         opacity: 1;

@@ -37,6 +37,8 @@ export default defineComponent({
   width: 100vw;
   position: fixed;
   z-index: 100;
+  background-color: rgba(255, 255, 255, 0.5);
+  
   .headerWrapper {
     max-width: 1280px;
     margin: auto;

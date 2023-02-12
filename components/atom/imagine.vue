@@ -26,6 +26,7 @@ export default defineComponent({
 @import '@/assets/styles/main.scss';
 .imageWrapper {
   width: 50%;
+  z-index: -10;
   .image {
     width: 100%;
   }

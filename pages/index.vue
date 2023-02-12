@@ -11,18 +11,18 @@
         <p :class="$style.bigTitle">{{$t('my latest projects')}}</p>
         <MoleculeCoverFlowProjectsList></MoleculeCoverFlowProjectsList>
         <div :class="$style.more">
-          <a :class="$style.moreLink">
+          <NuxtLink to="/projects" :class="$style.moreLink">
             <p>{{ $t('more projects') }}</p>
-          </a>
+          </NuxtLink>
         </div>
       </div>
       <div ref="blogWrapper" :class="[$style.blogWrapper, scrolledToBlog ? $style.revealBlog : undefined]">
         <p :class="$style.bigTitle">{{$t('my latest blog')}}</p>
         <OrganismBlog v-bind="LatestBlog"></OrganismBlog>
         <div :class="$style.more">
-          <a :class="$style.moreLink">
+          <NuxtLink to="/blog" :class="$style.moreLink">
             <p>{{ $t('more articles') }}</p>
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -101,21 +101,22 @@ export default defineComponent({
 @import "@/assets/styles/main.scss";
 .home {
   width: 100vw;
-
   &.changeColor {
     background: linear-gradient(180deg, $color1 0%, $color3 100%);
   }
-  //background-image: url("https://i.pinimg.com/564x/e5/45/40/e5454032198880571c878d0069de745c.jpg");
-  //background-size: cover;
   .homeWrapper {
     max-width: 1280px;
-    padding-left: 40px;
-    padding-right: 40px;
     margin: auto;
+    @include pc {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
     @include pc_standard {
-    padding-top: 150px;
+      padding-top: 150px;
     }
     padding-top: calc((150 / 1366) * 100vw);
+    padding-left: calc((40 / 1366) * 100vw);
+    padding-right: calc((40 / 1366) * 100vw);
 
     .kanbanWrapper {
       height: 700px;
@@ -124,7 +125,7 @@ export default defineComponent({
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 50px;
         cursor: pointer;
       }
     }

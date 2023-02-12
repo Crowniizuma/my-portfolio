@@ -32,20 +32,20 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   position: relative;
-  max-height: 400px;
+  //max-height: 400px;
 
   &::before {
     content: '';
     position: absolute;
     @include pc_standard {
-      width: 400px;
-      height: 395px;
-      left: 150px;
+      width: 500px;
+      height: 495px;
+      left: 80px;
       top: 0;
     }
-    width: calc((400 / 1200) * 100%);
-    height: calc((395 / 1366) * 100vw);
-    left: calc((150 / 1200) * 100%);
+    width: calc((500 / 1200) * 100%);
+    height: calc((495 / 1366) * 100vw);
+    left: calc((80 / 1200) * 100%);
     top: 0;
     border-radius: 50%;
     background: linear-gradient($color3, $color1);
@@ -55,20 +55,20 @@ export default defineComponent({
   .imageWrapper {
     z-index: 1;
     img {
-      max-width: 300px;
-      width: calc((300 / 1366) * 100vw);
+      max-width: 400px;
+      width: calc((400 / 1366) * 100vw);
     }
   }
   .textWrapper {
-    max-width: 500px;
-    width: calc((500 / 1366) * 100vw);
+    max-width: 600px;
+    width: calc((600 / 1366) * 100vw);
     @include pc_standard {
-      padding: 50px;  
+      padding: 70px;  
     }
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: calc((50 / 1366) * 100vw);
+    padding-left: calc((70 / 1366) * 100vw);
     background-color: rgba(234, 220, 166, 0.5);
     border-radius: 10%;
     z-index: 2;
@@ -77,25 +77,25 @@ export default defineComponent({
       width: fit-content;
       .title1 {
         @include pc_standard {
-          font-size: 45px;
+          font-size: 60px;
         }
-        font-size: calc((45 / 1366) * 100vw);
+        font-size: calc((60 / 1366) * 100vw);
         font-weight: bold;
         color: #000;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
     }
   
     .title2 {
       @include pc_standard {
-        font-size: 55px;
+        font-size: 70px;
       }
-      font-size: calc((55 / 1366) * 100vw);
+      font-size: calc((70 / 1366) * 100vw);
       font-weight: bold;
       color: #000;
       line-height: 1.25;
-      margin-bottom: 20px;
-      text-shadow: 5px 5px 3px $color1;
+      margin-bottom: 50px;
+      text-shadow: 10px 10px 6px $color1;
     }
   
     .button {
@@ -112,7 +112,7 @@ export default defineComponent({
       padding-bottom: calc((15 / 1366) * 100vw);
       padding-right: calc((30 / 1366) * 100vw);
       padding-left: calc((40 / 1366) * 100vw);
-      background-color: $color1;
+      background-color: #000;
       border: 2px solid transparent;
       border-radius: 10px;
       cursor: pointer;
@@ -135,9 +135,9 @@ export default defineComponent({
       }
       .buttonText {
         @include pc_standard {
-          font-size: 20px;
+          font-size: 30px;
         }
-        font-size: calc((20 / 1366) * 100vw);
+        font-size: calc((30 / 1366) * 100vw);
         color: $color2;
         font-weight: bold;
       }

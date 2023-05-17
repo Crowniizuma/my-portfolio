@@ -30,7 +30,7 @@ export default defineComponent({
   .projects {
     width: 100vw;
     .projectsWrapper {
-      width: 100%;
+      max-width: 1280px;
       margin: auto;
       @include pc {
         padding-left: 40px;

@@ -31,7 +31,8 @@ export default defineComponent({
     width: 100vw;
 
     .blogWrapper {
-      width: 100%;
+      max-width: 1280px;
+      margin: auto;
       @include pc {
         padding-left: 40px;
         padding-right: 40px;

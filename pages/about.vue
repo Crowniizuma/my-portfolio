@@ -2,8 +2,8 @@
   <div :class="$style.about">
     <div :class="$style.aboutWrapper">
       <MoleculeIntroduction v-bind="introduction" :key="introduction.pageTitle"></MoleculeIntroduction>
-      <AtomChart :class="$style.chart"></AtomChart>
     </div>
+    <MoleculeSkillChart :class="$style.chart"></MoleculeSkillChart>
   </div>
 </template>
 
@@ -31,7 +31,9 @@ export default defineComponent({
   .about {
     width: 100vw;
     .aboutWrapper {
-      width: 100%;
+      max-width: 1280px;
+      margin: auto;
+      height: 100vh;
       @include pc {
         padding-left: 40px;
         padding-right: 40px;
@@ -42,12 +44,9 @@ export default defineComponent({
       padding-top: calc((150 / 1366) * 100vw);
       padding-left: calc((40 / 1366) * 100vw);
       padding-right: calc((40 / 1366) * 100vw);
+      
     }
 
-    .chart {
-      width: 40%;
-      margin: auto;
-    }
   }
 
 </style>

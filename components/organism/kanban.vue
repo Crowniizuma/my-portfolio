@@ -77,9 +77,9 @@ export default defineComponent({
       width: fit-content;
       .title1 {
         @include pc_standard {
-          font-size: 60px;
+          font-size: 55px;
         }
-        font-size: calc((60 / 1366) * 100vw);
+        font-size: calc((55 / 1366) * 100vw);
         font-weight: bold;
         color: #000;
         margin-bottom: 20px;
@@ -88,9 +88,9 @@ export default defineComponent({
   
     .title2 {
       @include pc_standard {
-        font-size: 70px;
+        font-size: 65px;
       }
-      font-size: calc((70 / 1366) * 100vw);
+      font-size: calc((65 / 1366) * 100vw);
       font-weight: bold;
       color: #000;
       line-height: 1.25;
